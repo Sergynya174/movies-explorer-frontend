@@ -1,0 +1,31 @@
+.header{
+    background-color: #5C5C5C;
+    padding: 18px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__container{
+    align-self: center;
+}
+
+.header__link{
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-right: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.header__link:last-of-type{
+    margin-right: 0;
+}
+
+.header__link_active{
+    color: #000000;
+    background-color: #2BE080;
+    padding: 8px 20px;
+    border-radius: 3px;
+}

@@ -1,0 +1,15 @@
+.nav-tab{
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.nav-tab__link{
+    text-decoration-line: underline;
+    margin-right: 40px;
+    color: #000000;
+}
+
+.nav-tab__link:last-of-type{
+    margin-right: 0;
+}
