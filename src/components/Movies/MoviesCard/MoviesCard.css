@@ -1,0 +1,54 @@
+.movie-card{
+    list-style-type: none;
+    max-width: 270px;
+}
+
+.movie-card__container{
+    display: flex;
+    position: relative;
+}
+
+.movie-card__info{
+    margin: 14px 0 0;
+    width: 100%;
+}
+
+.movie-card__name{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.movie-card__time{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #A0A0A0;
+    border-top: 1px solid #E8E8E8;
+    padding-top: 6px;
+    margin-top: 29px 0 0;
+}
+
+.movie-card__like{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border: none;
+    background-image: url(../../../images/save1d.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 36px;
+    width: 24px;
+    height: 24px;
+}
+
+.movie-card__like_active{
+    background-image: url(../../../images/icon__COLOR_main-3.png);
+}
+
+.movie-card__delete{
+    background-image: url(../../../images/d1.png);
+}

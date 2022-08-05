@@ -5,8 +5,15 @@
     justify-content: space-between;
 }
 
+.header_navigation{
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
 .header__container{
     align-self: center;
+    display: flex;
+    align-items: center;
 }
 
 .header__link{
@@ -19,6 +26,15 @@
     line-height: 16px;
 }
 
+.header__link_nanigation{
+    color: #000000;
+    margin: 0 16px 0 44px;
+}
+
+.header__link_nanigation:last-of-type{
+    margin: 0;
+}
+
 .header__link:last-of-type{
     margin-right: 0;
 }
@@ -28,4 +44,11 @@
     background-color: #2BE080;
     padding: 8px 20px;
     border-radius: 3px;
+}
+
+.header__account{
+    background-image: url(../../../images/profile.png);
+    width: 100px;
+    height: 32px;
+    cursor: pointer;
 }
