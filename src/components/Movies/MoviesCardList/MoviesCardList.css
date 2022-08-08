@@ -17,3 +17,18 @@
     justify-items: center;
     margin-bottom: 30px;
 }
+
+@media (max-width: 864px) {
+    .movies-list__cards{
+        grid-template-columns: repeat(auto-fit, minmax(339px, 1fr));
+        gap: 30px;
+        max-width: 708px;
+    }
+}
+
+@media (max-width: 600px) {
+    .movies-list__cards{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+    }
+}

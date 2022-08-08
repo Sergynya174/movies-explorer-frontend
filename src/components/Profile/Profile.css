@@ -29,8 +29,6 @@
     font-weight: 500;
     font-size: 11px;
     line-height: 13px;
-    margin-right: 147px;
-    width: 141px;
 }
 
 .profile__input{
@@ -41,6 +39,8 @@
     border: none;
     padding: 0;
     text-align: end;
+    width: 80%;
+    outline: 0;
 }
 
 .profile__container:last-of-type{
@@ -72,4 +72,22 @@
 .profile__button-exit{
     color: #EE3465;
     font-weight: 500;
+}
+
+@media (max-width: 670px) {
+    .profile{
+        padding: 70px 30px 40px;
+        width: 260px;
+        max-height: 706px;
+    }
+
+    .profile__title{
+        margin: 0 0 80px
+    }
+
+    .profile__button-edit{
+        margin: 379px auto 16px;
+        font-size: 12px;
+        line-height: 15px;
+    }
 }

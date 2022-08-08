@@ -2,6 +2,15 @@ import React from "react";
 import './Profile.css';
 
 const Profile = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    const handleChangeData = (e) => {
+        e.preventDefault()
+      }
+
     return(
         <section className='profile'>
             <form className='profile-form'>
@@ -32,8 +41,8 @@ const Profile = () => {
                         placeholder='email'
                     />
                 </div>
-                <button className='profile__button profile__button-edit' type='submit'>Редактировать</button>
-                <button className='profile__button profile__button-exit' type='submit'>Выйти из аккаунта</button>
+                <button className='profile__button profile__button-edit' onClick={handleChangeData} type='submit'>Редактировать</button>
+                <button className='profile__button profile__button-exit' onClick={handleSubmit} type='submit'>Выйти из аккаунта</button>
             </form>
         </section>
     )

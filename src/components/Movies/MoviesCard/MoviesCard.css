@@ -1,6 +1,9 @@
 .movie-card{
     list-style-type: none;
-    max-width: 270px;
+}
+
+.movie-card__img{
+    width: 100%;
 }
 
 .movie-card__container{
@@ -43,6 +46,7 @@
     border-radius: 36px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 .movie-card__like_active{
@@ -51,4 +55,16 @@
 
 .movie-card__delete{
     background-image: url(../../../images/d1.png);
+}
+
+@media (max-width: 864px) {
+    .movie-card__img{
+        width: 339px;
+    }
+}
+
+@media (max-width: 670px) {
+    .movie-card__img{
+        width: 300px;
+    }
 }

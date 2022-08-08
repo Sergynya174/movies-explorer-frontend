@@ -22,3 +22,25 @@
     margin: 0;
     align-self: center;
 }
+
+@media screen and (max-width: 475px) {
+    .promo {
+        min-height: 570px;
+        padding: 0 14px;
+    }
+
+    .promo__container{
+        padding-bottom: 0;
+    }
+
+    .promo__title {
+        max-width: 300px;
+        font-size: 31px;
+        line-height: 39px;
+    }
+
+    .promo__img{
+        width: 248px;
+        height: 248px;
+    }
+}

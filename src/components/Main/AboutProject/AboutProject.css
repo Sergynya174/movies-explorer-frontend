@@ -56,6 +56,10 @@
     font-size: 14px;
     line-height: 17px;
     padding: 9px 14px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-project__week_backend{
@@ -73,4 +77,42 @@
     line-height: 17px;
     color: #A0A0A0;
     margin-top: 14px;
+}
+
+@media (max-width: 670px) {
+    .about-project{
+        margin: 70px 18px;
+    }
+
+    .about-project__title{
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 0 28px
+    }
+
+    .about-project__subtitle{
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 0 16px
+    }
+
+    .about-project__text{
+        font-size: 11px;
+        line-height: 16px;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-project__column{
+        margin: 0 0 56px;
+    }
+
+    .about-project__column:last-of-type{
+        margin: 0;
+    }
+
+    .about-project__timeline{
+        margin: 60px 0 0;
+    }
 }

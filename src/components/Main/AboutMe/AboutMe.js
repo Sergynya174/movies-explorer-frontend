@@ -34,6 +34,14 @@ const AboutMe = () => {
                         >
                         Github
                         </a>
+                        <a
+                        className='about-me__link'
+                        href='https://t.me/SergoMatrosov174'
+                        target='_blank'
+                        rel='noreferrer'
+                        >
+                        Tg
+                        </a>
                     </div>
                 </div>
                 <div className='about-me__photo-container'>

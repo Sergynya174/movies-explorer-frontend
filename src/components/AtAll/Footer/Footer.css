@@ -50,3 +50,38 @@
     text-decoration: none;
     color: #000000;
 }
+
+@media (max-width: 670px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding: 79px 10px 10px;
+    }
+
+    .footer__title{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .footer__container{
+        padding-top: 30px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .footer__list{
+        flex-direction: column;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    .footer__list-item{
+        margin: 0 0 12px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .footer__list-item:last-of-type{
+        margin: 0;
+    }
+}

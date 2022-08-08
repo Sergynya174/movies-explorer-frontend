@@ -1,6 +1,5 @@
 import React from "react";
 import './SearchForm.css';
-//import search from '../../../images/find.png';
 
 const SearchForm = () => {
     return(
@@ -11,8 +10,8 @@ const SearchForm = () => {
                     <button className='search-form__button' type='submit'></button>
                 </form>
                 <div className='search-form__filter-checkbox'>
-                    <input className='search-form__checkbox' type='checkbox'/>
                     <p className='search-form__text'>Короткометражки</p>
+                    <input className='search-form__checkbox' type='checkbox'/>
                 </div>
             </div>
         </section>

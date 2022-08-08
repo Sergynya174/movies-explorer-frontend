@@ -1,25 +1,17 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import './Header.css';
-import logo from '../../../images/logo.png';
+import { useRoutes } from 'react-router-dom';
+import HeaderLanding from './HeaderLanding/HeaderLanding';
+import HeaderMain from './HeaderMain/HeaderMain';
 
-const Header = () => {
-    return(
-        /*<section className='header'>
-            <img className='header__logo' src={logo} alt='Логотип'/>
-            <div className='header__container'>
-                <a className='header__link' href='#'>Регистрация</a>
-                <a className='header__link header__link_active' href='#'>Войти</a>
-            </div>
-        </section>*/
-        <section className='header header_navigation'>
-            <div className='header__container'>
-                <img className='header__logo' src={logo} alt='Логотип'/>
-                <a className='header__link header__link_nanigation' href='#'>Фильмы</a>
-                <a className='header__link header__link_nanigation' href='#'>Сохраненные фильмы</a>
-            </div>
-            <div className='header__account'></div>
-        </section>
+const Header = ({ handleMenu }) => {
+    return useRoutes(
+        [
+            { path: '/', element: <HeaderLanding handleOpenMenu={handleMenu} /> },
+            { path: '/movies', element: <HeaderMain handleOpenMenu={handleMenu} /> },
+            { path: '/saved-movies', element: <HeaderMain handleOpenMenu={handleMenu} /> },
+            { path: '/profile', element: <HeaderMain handleOpenMenu={handleMenu} /> },
+        ]
     )
 }
 
