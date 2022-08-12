@@ -19,7 +19,7 @@
 }
 
 .about-me__info{
-    width: 600px;
+    max-width: 600px;
     margin-right: 49px;
 }
 

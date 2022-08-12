@@ -15,7 +15,7 @@ const MoviesCard = () => {
                     <h2 className='movie-card__name'>Книготорговцы</h2>
                     <p className='movie-card__time'>1ч 42м</p>
                 </div>
-                <button className='movie-card__like'></button>
+                <button className='movie-card__like' type='button'></button>
             </div>
         </li>
     )

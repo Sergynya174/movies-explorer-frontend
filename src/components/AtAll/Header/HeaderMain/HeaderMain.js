@@ -22,8 +22,8 @@ const HeaderMain = () => {
                     <Link className='header__link header__link_navigation' to='/saved-movies'>Сохраненные фильмы</Link>
                 </div>
                 <NavLink to='/profile'>            
-                    <button className='header__account'></button>
-                    <button onClick={handleOpen} className='header__burger-menu'></button>
+                    <button className='header__account' type='button'></button>
+                    <button onClick={handleOpen} className='header__burger-menu' type='button'></button>
                 </NavLink>
                 {
                     isClicked ?
@@ -34,7 +34,7 @@ const HeaderMain = () => {
                                 <NavLink to='/movies' onClick={handleClose} className='header__menu-link'>Фильмы</NavLink>
                                 <NavLink to='/saved-movies' onClick={handleClose} className='header__menu-link'>Сохраненные фильмы</NavLink>
                                 <Link to='/profile' onClick={handleClose} className='header__account_active'></Link>
-                                <button onClick={handleClose} className='header__menu-close'>&#x2716;</button>
+                                <button onClick={handleClose} className='header__menu-close' type='button'>&#x2716;</button>
                             </div>
                         </>
                         :

@@ -101,13 +101,11 @@
     border: 0;
     color: black;
     font-size: 22px;
-    transition: all 0.2s ease;
 }
 
 .header__menu-close:hover {
     cursor: pointer;
     opacity: 0.8;
-    color: #4285f4;
 }
 
 .header__menu-link {

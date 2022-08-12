@@ -19,13 +19,11 @@
 
 .portfolio__item{
     list-style-type: none;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
+    padding: 20px 0 19px;
 }
 
 .portfolio__item:first-of-type{
-    padding: 0 0 20px;
+    padding: 0 0 19px;
 }
 
 .portfolio__item:last-of-type{
@@ -39,12 +37,18 @@
 
 .portfolio__link{
     font-style: normal;
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio__link-text{
     font-weight: 400;
     font-size: 30px;
     line-height: 50px;
     letter-spacing: -0.04em;
-    text-decoration: none;
-    color: #000000;
+    margin: 0;
 }
 
 .portfolio__link-icon{
