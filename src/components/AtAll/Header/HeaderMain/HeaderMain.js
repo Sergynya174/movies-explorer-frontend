@@ -23,8 +23,8 @@ const HeaderMain = () => {
                 </div>
                 <NavLink to='/profile'>            
                     <button className='header__account' type='button'></button>
-                    <button onClick={handleOpen} className='header__burger-menu' type='button'></button>
                 </NavLink>
+                <button onClick={handleOpen} className='header__burger-menu' type='button'></button>
                 {
                     isClicked ?
                         <>
