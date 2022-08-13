@@ -3,7 +3,7 @@ import React from "react";
 
 const FooterLanding = () => {
     return(
-        <section className='footer'>
+        <footer className='footer'>
             <h4 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h4>
             <div className='footer__container'>
                 <span className='footer__date'>&copy; Сергей Матросов {new Date().getFullYear()}</span>
@@ -19,7 +19,7 @@ const FooterLanding = () => {
                     </li>
                 </ul>
             </div>
-        </section>
+        </footer>
     )
 }
 
