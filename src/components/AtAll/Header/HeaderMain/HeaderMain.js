@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../../../images/logo.png';
+import logo from '../../../../images/logo.svg';
 
 const HeaderMain = () => {
     const [isClicked, setIsDataLoad] = React.useState(false);
@@ -15,16 +15,16 @@ const HeaderMain = () => {
 
     return(
         <>
-            <section className='header header_navigation'>
+            <header className='header header_navigation'>
                 <div className='header__container'>
                     <Link to='/'><img className='header__logo' src={logo} alt='Логотип'/></Link>
                     <Link className='header__link header__link_navigation' to='/movies'>Фильмы</Link>
                     <Link className='header__link header__link_navigation' to='/saved-movies'>Сохраненные фильмы</Link>
                 </div>
                 <NavLink to='/profile'>            
-                    <button className='header__account'></button>
-                    <button onClick={handleOpen} className='header__burger-menu'></button>
+                    <button className='header__account' type='button'></button>
                 </NavLink>
+                <button onClick={handleOpen} className='header__burger-menu' type='button'></button>
                 {
                     isClicked ?
                         <>
@@ -34,13 +34,13 @@ const HeaderMain = () => {
                                 <NavLink to='/movies' onClick={handleClose} className='header__menu-link'>Фильмы</NavLink>
                                 <NavLink to='/saved-movies' onClick={handleClose} className='header__menu-link'>Сохраненные фильмы</NavLink>
                                 <Link to='/profile' onClick={handleClose} className='header__account_active'></Link>
-                                <button onClick={handleClose} className='header__menu-close'>&#x2716;</button>
+                                <button onClick={handleClose} className='header__menu-close' type='button'></button>
                             </div>
                         </>
                         :
                         ''
                 }
-            </section>
+            </header>
         </>
     )
 }

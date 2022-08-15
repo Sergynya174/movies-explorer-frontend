@@ -1,6 +1,7 @@
 .movies-list{
     display: flex;
     flex-direction: column;
+    padding: 0 10px;
 }
 
 .movies-list__cards{

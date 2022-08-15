@@ -20,15 +20,17 @@ function App() {
   return (
     <div className='page'>
       <Header handleMenu={toggleMenu} />
-      <Routes>
-        <Route path='/' element={<Main/>} />
-        <Route path='/movies' element={<Movies/>} />
-        <Route path='/saved-movies' element={<SavedMovies/>} />
-        <Route path='/profile' element={<Profile/>} />
-        <Route path='/signin' element={<Login/>} />
-        <Route path='/signup' element={<Register/>} />
-        <Route path='/*' element={<NotFound/>} />
-      </Routes>
+      <main className='main'>
+        <Routes>
+          <Route path='/' element={<Main/>} />
+          <Route path='/movies' element={<Movies/>} />
+          <Route path='/saved-movies' element={<SavedMovies/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/signin' element={<Login/>} />
+          <Route path='/signup' element={<Register/>} />
+          <Route path='/*' element={<NotFound/>} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
