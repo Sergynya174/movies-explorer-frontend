@@ -209,7 +209,7 @@ function App() {
         <Header handleMenu={toggleMenu} />
         <main className="main">
           <Routes>
-            <Route index path="/*" element={<Main />} />
+            <Route index path="/" element={<Main />} />
             <Route
               path="/movies"
               element={
