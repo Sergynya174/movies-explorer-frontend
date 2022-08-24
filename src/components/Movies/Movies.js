@@ -36,7 +36,7 @@ const Movies = ({
 
   const handleSaveMovie = (movie) => {
     mainApi
-      .saveMovie(movie)
+      .addNewMovie(movie)
       .then((res) => {
         const newSavedMovies = [...savedMovies, res];
         setSavedMovies(newSavedMovies);

@@ -1,22 +1,14 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
-import moviesApi from '../../../utils/MoviesApi';
+
 
 const MoviesCardList = ({
+  movies,
   savedMovies,
   onDeleteMovie,
   onSaveMovie = () => null,
 }) => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    moviesApi.getMovies()
-    .then((res) => {
-      setMovies(res)
-    })
-    .catch((err) => console.log(err));
-  }, []);
 
   return (
     <section className="movies-list">
