@@ -1,6 +1,6 @@
 # Фронтенд Диплома
 
-​
+
 
 ### Технологии:
 
@@ -12,7 +12,7 @@
 
 + Файловая структура проекта по БЭМ
 
-​
+
 
 ### Функционал: 
 
@@ -34,6 +34,6 @@
 
 ### Запуск проекта локально
 
-`npm start` — запускает приложение в браузере​
-​
-Ссылука на pullrequest: https://github.com/Sergynya174/movies-explorer-frontend/pull/4
+`npm start` — запускает приложение в браузере
+
+###Ссылка на pullrequest: https://github.com/Sergynya174/movies-explorer-frontend/pull/4
