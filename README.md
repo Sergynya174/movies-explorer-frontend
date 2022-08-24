@@ -36,3 +36,4 @@
 
 `npm start` — запускает приложение в браузере​
 ​
+Ссылука на pullrequest: https://github.com/Sergynya174/movies-explorer-frontend/pull/4
