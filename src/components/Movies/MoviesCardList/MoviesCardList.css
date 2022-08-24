@@ -17,6 +17,7 @@
     list-style: none;
     justify-items: center;
     margin-bottom: 30px;
+    min-height: 240px;
 }
 
 @media (max-width: 864px) {

@@ -8,6 +8,7 @@
 .login__form{
     display: flex;
     flex-direction: column;
+    max-width: 396px;
 }
 
 .login__logo{
@@ -42,11 +43,19 @@
     margin-top: 0;
 }
 
-.login__input{
+.login__input:valid{
     border: none;
-    border-bottom: 1px solid #E8E8E8;
+    border-bottom: 1px solid #2BE080;
     outline:none;
     padding: 0 0 10px;
+}
+
+.login__input:invalid{
+    border: none;
+    border-bottom: 1px solid #EE3465;
+    outline:none;
+    padding: 0 0 10px;
+    color: #EE3465;
 }
 
 .login__button{
@@ -56,6 +65,7 @@
     width: 395px;
     height: 45px;
     cursor: pointer;
+    color: #FFFFFF;
 }
 
 .login__enter{
@@ -81,6 +91,20 @@
     color: #2BE080;
     text-decoration: none;
     margin: 0 0 0 6px ;
+}
+
+.login__error{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #EE3465;
+    margin: 6px 0 0;
+}
+
+.login__error_active{
+    opacity: 1;
 }
 
 @media(max-width: 600px) {
