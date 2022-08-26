@@ -98,13 +98,15 @@ const Movies = ({
       ) : error ? (
         <span className="movies__error">{error}</span>
       ) : (
-        <MoviesCardList
+        <>
+          <MoviesCardList
           movies={shownMovies}
           handleShowMoreButton={handleShowMore}
           onDeleteMovie={handleDeleteMovie}
           onSaveMovie={handleSaveMovie}
           savedMovies={savedMovies}
-        />
+          />
+        </>
       )}
       {isShowMoreButton && (
         <button className="movies__more-button" onClick={handleShowMore}>

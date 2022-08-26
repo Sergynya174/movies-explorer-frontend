@@ -40,7 +40,7 @@ const Register = ({ onRegister, isLoading, error }) => {
             required
             pattern="^[A-Za-zА-Яа-яЁё /s -]+$"
             autoComplete="on"
-            value={"" || values.name}
+            value={values.name || ""}
             onChange={handleChange}
           />
           <label className="register__label">E-mail</label>
@@ -53,7 +53,7 @@ const Register = ({ onRegister, isLoading, error }) => {
             type="email"
             required
             autoComplete="on"
-            value={"" || values.email}
+            value={values.email || ""}
             onChange={handleChange}
           />
           <label className="register__label">Пароль</label>

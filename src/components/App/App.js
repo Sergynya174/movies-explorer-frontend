@@ -106,9 +106,7 @@ function App() {
     mainApi
       .register(name, email, password)
       .then((res) => {
-        if (res) {
-          navigate("/signin");
-        }
+        handleLogin(name, email, password)
       })
       .catch((err) => {
         setRegisterErrorText(err);
@@ -145,11 +143,11 @@ function App() {
       .finally(() => setIsLoading(false));
   };
 
-  const handleEditProfile = (values) => {
+  const handleEditProfile = (data) => {
     setIsLoading(true);
-    console.log("values in handleEditProfile: ", values);
+    console.log("values in handleEditProfile: ", data);
     mainApi
-      .updateUser(values)
+      .updateUser(data)
       .then((res) => {
         setCurrentUser(res);
         setInfoTooltip({
