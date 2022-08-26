@@ -8,9 +8,8 @@ const Login = ({ onLogin, setError, error }) => {
 
   const { values, errors, isValid, handleChange } = useFormWithValidation();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("in login-handleSubmit", values);
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
     onLogin(values);
   };
 

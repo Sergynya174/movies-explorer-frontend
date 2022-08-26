@@ -85,7 +85,6 @@ function App() {
       .then((res) => {
         if (res) {
           setCurrentUser(res);
-          console.log("setCurrentUser in getUserInfo:", setCurrentUser(res));
           setLoggedIn(true);
           navigate("/movies");
           pathname === "/signin" || pathname === "/signup"
@@ -120,7 +119,7 @@ function App() {
     mainApi
       .login(data)
       .then((res) => {
-        setCurrentUser(JSON.stringify(res));
+        setCurrentUser(res);
         localStorage.setItem("jwt", res.token);
         setLoggedIn(true);
         navigate("/movies");

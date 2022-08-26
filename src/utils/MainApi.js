@@ -5,7 +5,7 @@ class MainApi {
         this._baseUrl = data.serverUrl;
     }
 
-    _reguestResult(res) {
+    _requestResult(res) {
         if(res.ok) {
             return res.json();
         } else {
