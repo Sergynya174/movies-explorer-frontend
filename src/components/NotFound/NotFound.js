@@ -1,6 +1,6 @@
-import { useNavigate } from "react";
+import React from "react";
 import './NotFound.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
 

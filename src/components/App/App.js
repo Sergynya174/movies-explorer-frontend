@@ -27,7 +27,6 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [registerErrorText, setRegisterErrorText] = useState({});
-  const [savedMoviesList, setSavedMoviesList] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [infoTooltipOpened, setInfoTooltipOpened] = useState(false);
   const [infoTooltip, setInfoTooltip] = useState({ img: "", title: "" });
@@ -209,7 +208,7 @@ function App() {
         <Header handleMenu={toggleMenu} />
         <main className="main">
           <Routes>
-            <Route index path="/" element={<Main />} />
+            <Route path="/" element={<Main />} />
             <Route
               path="/movies"
               element={
