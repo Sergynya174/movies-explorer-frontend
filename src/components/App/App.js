@@ -119,12 +119,12 @@ function App() {
       });
   };
 
-  const handleLogin = (values) => {
+  const handleLogin = ({ email, password }) => {
     console.log("data in handleLogin: ");
-    console.log(values);
+    console.log(email, password);
     setIsLoading(true);
     mainApi
-      .login(values)
+      .login(email, password)
       .then((res) => {
         setCurrentUser(res);
         console.log("res.token in handleLogin: ");
