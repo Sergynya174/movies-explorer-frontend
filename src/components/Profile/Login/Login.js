@@ -21,10 +21,6 @@ const Login = ({ onLogin, setError, error }) => {
   };
 
   useEffect(() => {
-        console.log('error');
-        console.log(error);
-        console.log('errors');
-        console.log(errors);
         setError('');
     }, [error, errors, setError, values]);
 

@@ -81,10 +81,8 @@ function App() {
 
   const getUserInfo = () => {
     mainApi
-      .getUsers()
+      .getUserInfo()
       .then((res) => {
-        console.log("res in getUserInfo");
-        console.log(res);
         if (res) {
           setCurrentUser(res);
           console.log("setCurrentUser in getUserInfo:", setCurrentUser(res));
@@ -101,12 +99,12 @@ function App() {
       });
   };
 
-  const handleRegister = ({ name, email, password }) => {
+  const handleRegister = (data) => {
     setIsLoading(true);
     mainApi
-      .register(name, email, password)
+      .register(data)
       .then((res) => {
-        handleLogin(name, email, password)
+        handleLogin(data)
       })
       .catch((err) => {
         setRegisterErrorText(err);
@@ -117,19 +115,13 @@ function App() {
       });
   };
 
-  const handleLogin = ({ email, password }) => {
-    console.log("data in handleLogin: ");
-    console.log(email, password);
+  const handleLogin = (data) => {
     setIsLoading(true);
     mainApi
-      .login(email, password)
+      .login(data)
       .then((res) => {
-        setCurrentUser(res);
-        console.log("res.token in handleLogin: ");
-        console.log(res.token);
-        console.log("res in handleLogin: ");
-        console.log(res);
-        localStorage.setItem("token", res.token);
+        setCurrentUser(JSON.stringify(res));
+        localStorage.setItem("jwt", res.token);
         setLoggedIn(true);
         navigate("/movies");
       })
@@ -145,7 +137,6 @@ function App() {
 
   const handleEditProfile = (data) => {
     setIsLoading(true);
-    console.log("values in handleEditProfile: ", data);
     mainApi
       .updateUser(data)
       .then((res) => {
@@ -244,6 +235,7 @@ function App() {
                     setError={setError}
                     handleEditProfile={handleEditProfile}
                     onSignOut={handleSignOut}
+                    success={success}
                   />
                 </ProtectedRoute>
               }

@@ -39,7 +39,7 @@ const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
             required
             placeholder="Имя"
             onChange={handleChange}
-            value={"" || values.name}
+            value={values.name || ""}
           />
         </div>
         <div className="profile__container">
@@ -54,7 +54,7 @@ const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
             required
             placeholder="email"
             onChange={handleChange}
-            value={"" || values.email}
+            value={ values.email || ""}
           />
         </div>
         <span
