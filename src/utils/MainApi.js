@@ -24,7 +24,7 @@ class MainApi {
         .then((res) => this._requestResult(res));
     }
     
-    getMovies() {
+    getSavedMovies() {
         return fetch(`${this._baseUrl}/movies`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('jwt')}`,
