@@ -1,4 +1,4 @@
-import { BASE_URL } from './constants';
+import { BASE_URL, URL } from './constants';
 
 class MainApi {
     constructor({apiURL, serverUrl}) {
@@ -65,7 +65,7 @@ class MainApi {
                 year: data.year || ' ',
                 description: data.description || ' ',
                 image: `${this._apiURL}${data.image.url}`,
-                trailerLink: data.trailerLink,
+                trailerLink: `${this._apiURL}${data.image.formats.thumbnail.url}`,
                 thumbnail: `${this._apiURL}${data.image.formats.thumbnail.url}`,
                 movieId: data.id,
                 nameRU: data.nameRU || ' ',
@@ -102,6 +102,7 @@ class MainApi {
     };
     
     register(data){
+
         return fetch(`${this._baseUrl}/signup`, {
             method: 'POST',
             headers: {
@@ -120,7 +121,7 @@ class MainApi {
 
 const mainApi = new MainApi({
     serverUrl: BASE_URL,
-    apiURL: 'https://api.nomoreparties.co',
+    apiURL: URL,
 });
   
 export default mainApi;

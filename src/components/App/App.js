@@ -100,6 +100,7 @@ function App() {
   };
 
   const handleRegister = (data) => {
+    console.log(data)
     setIsLoading(true);
     mainApi
       .register(data)
@@ -166,6 +167,8 @@ function App() {
     setCurrentUser({});
     setLoggedIn(false);
     localStorage.clear();
+    setSavedMovies([]);
+    setSearchedMovies([]);
     navigate("/");
   };
 

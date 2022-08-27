@@ -28,17 +28,23 @@ const Movies = ({
         const filteredMovies = savedMovies.filter(
           (item) => item._id !== movieId
         );
-        setSavedMovies(filteredMovies);
-        localStorage.setItem("savedMovies", JSON.stringify(filteredMovies));
+        console.log(setSavedMovies(filteredMovies));
+        localStorage.setItem("savedMovies", console.log(JSON.stringify(filteredMovies)));
       })
       .catch((err) => console.log(err));
   };
 
   const handleSaveMovie = (movie) => {
-    mainApi.addNewMovie(movie)
-      .then(newMovie => {
-        setSavedMovies([newMovie, ...savedMovies]);
+    mainApi
+      .addNewMovie(movie)
+      .then((res) => {
+        const newSavedMovies = [...savedMovies, res];
+        setSavedMovies(newSavedMovies);
+        localStorage.setItem('savedMovies', JSON.stringify(newSavedMovies));
       })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {
@@ -53,6 +59,10 @@ const Movies = ({
 
   useEffect(() => {
     switch (true) {
+      case screenWidth > 1248:
+        setExtraMovies(4);
+        setLimitMovies(12);
+        break;
       case screenWidth > 1024:
         setExtraMovies(3);
         setLimitMovies(12);

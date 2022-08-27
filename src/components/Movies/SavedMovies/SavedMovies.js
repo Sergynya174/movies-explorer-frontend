@@ -4,13 +4,11 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import mainApi from '../../../utils/MainApi';
 import filterMovies from "../../../utils/filterMovies";
-import Preloader from "../Preloader/Preloader";
 import "../Movies.css";
 
 const SavedMovies = ({
     movies,
     setSavedMovies,
-    isLoading
 }) => {
 
     const [search, setSearch] = useState({query: '', isShort: false});
@@ -60,6 +58,7 @@ const SavedMovies = ({
             handleSearch={searchInSavedMovies}
             setSearch={setSearch}
             />
+            {error && <span className="saved-movies__error">{error}</span>}
             <MoviesCardList
             movies={filteredMovies}
             savedMovies={filteredMovies}

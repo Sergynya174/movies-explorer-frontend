@@ -10,7 +10,7 @@ const MoviesCard = ({
   onSave
 }) => {
   const [imgSrc, setImgSrc] = useState("");
-  const [saved, setSaved] = useState(true);
+  const [saved, setSaved] = useState(false);
   let location = useLocation();
   const { _id } = useContext(CurrentUserContext);
 
@@ -31,7 +31,7 @@ const MoviesCard = ({
         ? movie.image
         : "https://api.nomoreparties.co" + movie.image.url;
     setImgSrc(src);
-  }, [location.pathname, movie]);
+  }, [movie]);
 
   const formatDuration = (duration) => {
     const hours = Math.floor(duration / 60);

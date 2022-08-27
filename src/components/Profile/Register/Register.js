@@ -12,6 +12,7 @@ const Register = ({ onRegister, isLoading, error }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     onRegister(values);
+    console.log(values)
   };
 
   const showError = () => {

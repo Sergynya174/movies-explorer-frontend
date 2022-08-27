@@ -5,18 +5,18 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
     const { values, handleChange, errors, isValid, setValues, resetForm } =
-        useFormWithValidation();
+      useFormWithValidation();
     const { name, email } = useContext(CurrentUserContext);
 
     const showError = () => {
-        for (const key in errors) {
-            if (errors[key]) return errors[key];
-        }
+      for (const key in errors) {
+        if (errors[key]) return errors[key];
+      }
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        handleEditProfile(values);
+      e.preventDefault();
+      handleEditProfile(values);
     };
 
     useEffect(() => {
@@ -55,7 +55,7 @@ const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
             required
             placeholder="email"
             onChange={handleChange}
-            value={values.email || ""}
+            value={console.log(values.email)}
           />
         </div>
         <span
