@@ -222,6 +222,7 @@ function App() {
                   <SavedMovies
                     movies={savedMovies}
                     setSavedMovies={setSavedMovies}
+                    isLoading={isLoading}
                   />
                 </ProtectedRoute>
               }
