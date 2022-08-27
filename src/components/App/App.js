@@ -43,6 +43,7 @@ function App() {
 
   useEffect(() => {
     getUserInfo();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -68,7 +69,7 @@ function App() {
         setError("Ничего не найдено");
       } else setError("");
     }
-  }, [movies, search.query, search.isShort]);
+  }, [movies, search.query, search.isShort, search]);
 
   useEffect(() => {
     if (localStorage.getItem("searchedMovies")) {
@@ -193,7 +194,7 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        <Header handleMenu={toggleMenu} />
+        <Header handleMenu={toggleMenu} loggedIn={loggedIn} />
         <main className="main">
           <Routes>
             <Route path="/" element={<Main />} />

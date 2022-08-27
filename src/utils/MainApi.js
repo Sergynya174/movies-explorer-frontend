@@ -1,8 +1,9 @@
 import { BASE_URL } from './constants';
 
 class MainApi {
-    constructor(data) {
-        this._baseUrl = data.serverUrl;
+    constructor({apiURL, serverUrl}) {
+        this._baseUrl = serverUrl;
+        this._apiURL = apiURL;
     }
 
     _requestResult(res) {
@@ -119,6 +120,7 @@ class MainApi {
 
 const mainApi = new MainApi({
     serverUrl: BASE_URL,
+    apiURL: 'https://api.nomoreparties.co',
 });
   
 export default mainApi;

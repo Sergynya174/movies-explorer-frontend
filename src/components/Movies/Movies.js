@@ -35,16 +35,10 @@ const Movies = ({
   };
 
   const handleSaveMovie = (movie) => {
-    mainApi
-      .addNewMovie(movie)
-      .then((res) => {
-        const newSavedMovies = [...savedMovies, res];
-        setSavedMovies(newSavedMovies);
-        localStorage.setItem("savedMovies", JSON.stringify(newSavedMovies));
+    mainApi.addNewMovie(movie)
+      .then(newMovie => {
+        setSavedMovies([newMovie, ...savedMovies]);
       })
-      .catch((err) => {
-        console.log(err);
-      });
   };
 
   useEffect(() => {
@@ -87,7 +81,7 @@ const Movies = ({
   };
 
   return (
-    <main className="cards">
+    <section className="cards">
       <SearchForm
         search={search}
         handleSearch={searchMovies}
@@ -113,7 +107,7 @@ const Movies = ({
           Ещё
         </button>
       )}
-    </main>
+    </section>
   );
 };
 

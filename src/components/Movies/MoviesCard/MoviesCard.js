@@ -31,7 +31,7 @@ const MoviesCard = ({
         ? movie.image
         : "https://api.nomoreparties.co" + movie.image.url;
     setImgSrc(src);
-  }, [movie]);
+  }, [location.pathname, movie]);
 
   const formatDuration = (duration) => {
     const hours = Math.floor(duration / 60);
@@ -70,7 +70,7 @@ const MoviesCard = ({
           <button
             onClick={handleLikeClick}
             className={
-              saved
+              !saved
                 ? "movie-card__button movie-card__like"
                 : "movie-card__button movie-card__like_active"
             }

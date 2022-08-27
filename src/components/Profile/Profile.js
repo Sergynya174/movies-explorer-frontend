@@ -4,7 +4,7 @@ import { useFormWithValidation } from "../../hooks/useFormValidation";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
-    const { values, handleChange, errors, isValid, setValues } =
+    const { values, handleChange, errors, isValid, setValues, resetForm } =
         useFormWithValidation();
     const { name, email } = useContext(CurrentUserContext);
 
@@ -20,8 +20,9 @@ const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
     };
 
     useEffect(() => {
-        setValues({ name, email });
-    }, [name, email, setValues]);
+      resetForm();
+      setValues({ name, email });
+    }, [name, email, setValues, resetForm]);
 
   return (
     <section className="profile">
@@ -34,7 +35,7 @@ const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
             minLength="2"
             maxLength="40"
             id="profile-name"
-            name="profile-name"
+            name="name"
             type="text"
             required
             placeholder="Имя"
@@ -54,7 +55,7 @@ const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
             required
             placeholder="email"
             onChange={handleChange}
-            value={ values.email || ""}
+            value={values.email || ""}
           />
         </div>
         <span

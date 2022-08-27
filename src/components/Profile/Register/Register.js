@@ -11,7 +11,6 @@ const Register = ({ onRegister, isLoading, error }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log("in register-handleSubmit", values);
     onRegister(values);
   };
 
@@ -66,7 +65,7 @@ const Register = ({ onRegister, isLoading, error }) => {
             type="password"
             required
             autoComplete="on"
-            value={"" || values.password}
+            value={values.password || ""}
             onChange={handleChange}
           />
           <span
@@ -81,7 +80,7 @@ const Register = ({ onRegister, isLoading, error }) => {
         <button
           className="register__button"
           type="submit"
-          disabled={!isValid ? true : ''}
+          disabled={!isValid || isLoading || error}
         >
           Зарегистрироваться
         </button>
