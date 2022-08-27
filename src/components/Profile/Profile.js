@@ -55,7 +55,7 @@ const Profile = ({ handleEditProfile, onSignOut, isLoading }) => {
             required
             placeholder="email"
             onChange={handleChange}
-            value={console.log(values.email)}
+            value={values.email || ""}
           />
         </div>
         <span

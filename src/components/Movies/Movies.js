@@ -28,8 +28,7 @@ const Movies = ({
         const filteredMovies = savedMovies.filter(
           (item) => item._id !== movieId
         );
-        console.log(setSavedMovies(filteredMovies));
-        localStorage.setItem("savedMovies", console.log(JSON.stringify(filteredMovies)));
+        localStorage.setItem("savedMovies", JSON.stringify(filteredMovies));
       })
       .catch((err) => console.log(err));
   };

@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import Main from "../Main/Main";
-import Footer from "../AtAll/Footer/Footer";
-import Header from "../AtAll/Header/Header";
+import Footer from "../atAll/Footer/Footer";
+import Header from "../atAll/Header/Header";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../Movies/SavedMovies/SavedMovies";
 import Profile from "../Profile/Profile";
@@ -100,11 +100,10 @@ function App() {
   };
 
   const handleRegister = (data) => {
-    console.log(data)
     setIsLoading(true);
     mainApi
       .register(data)
-      .then((res) => {
+      .then(() => {
         handleLogin(data)
       })
       .catch((err) => {
