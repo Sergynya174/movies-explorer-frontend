@@ -28,6 +28,7 @@ const Movies = ({
         const filteredMovies = savedMovies.filter(
           (item) => item._id !== movieId
         );
+        setSavedMovies(filteredMovies)
         localStorage.setItem("savedMovies", JSON.stringify(filteredMovies));
       })
       .catch((err) => console.log(err));
@@ -60,7 +61,7 @@ const Movies = ({
     switch (true) {
       case screenWidth > 1248:
         setExtraMovies(4);
-        setLimitMovies(12);
+        setLimitMovies(16);
         break;
       case screenWidth > 1024:
         setExtraMovies(3);

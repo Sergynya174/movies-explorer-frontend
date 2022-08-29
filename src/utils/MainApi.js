@@ -18,6 +18,7 @@ class MainApi {
 
     getUserInfo() {
         return fetch(`${this._baseUrl}/users/me`, {
+            method: "GET",
             headers: {
                 "Content-Type": "application/json",
                 authorization: `Bearer ${localStorage.getItem('jwt')}`,
@@ -28,6 +29,7 @@ class MainApi {
     
     getSavedMovies() {
         return fetch(`${this._baseUrl}/movies`, {
+            method: "GET",
             headers: {
                 "Content-Type": "application/json",
                 authorization: `Bearer ${localStorage.getItem('jwt')}`,
@@ -102,7 +104,6 @@ class MainApi {
     };
     
     register(data){
-
         return fetch(`${this._baseUrl}/signup`, {
             method: 'POST',
             headers: {

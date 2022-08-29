@@ -49,7 +49,7 @@ const SavedMovies = ({
                 setError('Ничего не найдено');
             } else setError('');
         }
-    }, [movies, search.query, search.isShort, search]);
+    }, [movies, search.query, search.isShort]);
 
     return(
         <section className='saved-movies'>

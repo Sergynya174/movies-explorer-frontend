@@ -4,7 +4,7 @@ import logo from "../../../images/logo.svg";
 import { Link } from "react-router-dom";
 import { useFormWithValidation } from "../../../hooks/useFormValidation";
 
-const Login = ({ onLogin, setError, error }) => {
+const Login = ({ onLogin, setError, error, isLoading }) => {
 
   const { values, errors, isValid, handleChange } = useFormWithValidation();
 
@@ -21,7 +21,7 @@ const Login = ({ onLogin, setError, error }) => {
 
   useEffect(() => {
         setError('');
-    }, [error, errors, setError, values]);
+    }, [setError, values]);
 
   return (
     <section className="login">
@@ -65,7 +65,7 @@ const Login = ({ onLogin, setError, error }) => {
         <button
           className="login__button"
           type="submit"
-          disabled={!isValid ? true : ""}
+          disabled={!isValid || isLoading || error}
         >
           Войти
         </button>

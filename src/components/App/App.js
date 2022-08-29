@@ -43,7 +43,6 @@ function App() {
 
   useEffect(() => {
     getUserInfo();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -250,6 +249,7 @@ function App() {
                   error={error}
                   setError={setError}
                   onLogin={handleLogin}
+                  isLoading={isLoading}
                 />
               }
             />
