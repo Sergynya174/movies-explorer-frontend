@@ -31,7 +31,21 @@
     line-height: 13px;
 }
 
-.profile__input{
+.profile__input:valid{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    border: none;
+    padding: 0;
+    text-align: end;
+    width: 80%;
+    outline: 0;
+    color: #000000;
+}
+
+.profile__input:invalid{
+    color: #EE3465;
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -45,11 +59,24 @@
 
 .profile__container:last-of-type{
     border: none;
-    padding-bottom: 0;
 }
 
 .profile__container:first-of-type{
     padding-top: 0;
+}
+
+.profile__error{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #EE3465;
+    margin: 6px 0 0;
+}
+
+.profile__error_active{
+    opacity: 1;
 }
 
 .profile__button{

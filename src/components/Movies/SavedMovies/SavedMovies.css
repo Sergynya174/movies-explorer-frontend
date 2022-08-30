@@ -1,5 +1,9 @@
 .saved-movies{
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 0 210px;
+}
+
+.saved-movies__error{
+    margin: 0;
+    padding: 0 70px;
 }

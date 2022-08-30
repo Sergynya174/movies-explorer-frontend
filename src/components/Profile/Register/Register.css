@@ -8,6 +8,7 @@
 .register__form{
     display: flex;
     flex-direction: column;
+    max-width: 396px;
 }
 
 .register__logo{
@@ -42,11 +43,20 @@
     margin-top: 0;
 }
 
-.register__input{
+.register__input:valid{
     border: none;
-    border-bottom: 1px solid #E8E8E8;
+    border-bottom: 1px solid #2BE080;
     outline:none;
     padding: 0 0 10px;
+    color: #000000;
+}
+
+.register__input:invalid{
+    border: none;
+    outline:none;
+    color: #EE3465;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #EE3465;
 }
 
 .register__error{
@@ -59,6 +69,10 @@
     margin: 6px 0 0;
 }
 
+.register__error_active{
+    opacity: 1;
+}
+
 .register__button{
     border: none;
     background: #2BE080;
@@ -66,6 +80,11 @@
     width: 395px;
     height: 45px;
     cursor: pointer;
+    color: #FFFFFF;
+}
+
+.register__button_disabled {
+    cursor: default;
 }
 
 .register__enter{

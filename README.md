@@ -3,7 +3,6 @@
 ### Описание проекта: 
 Фронтенд Диплома «Movies Explorer» — это интерактивная SPA-страница, на которой пользователи могут искать фильмы по ключевым словам и добавлять их в избранное в личном кабинете. Stack: JavaScript, API, React.js, JSX, HTML5, CSS3, БЭМ, Flexbox, Grid Layout, Figma.
 
-
 ### Технологии:
 
 + Адаптивная верстка
@@ -14,8 +13,6 @@
 
 + Файловая структура проекта по БЭМ
 
-
- 
 
 ### Функционал: 
 
@@ -38,4 +35,10 @@
 ### Запуск проекта локально
 
 `npm start` — запускает приложение в браузере
+
+
+[Ссылка на pullrequest](https://github.com/Sergynya174/movies-explorer-frontend/pull/4)
+
+
+[Ссылка на домен](https://sergynya174.developer.diplom.nomoredomains.xyz/)
 
